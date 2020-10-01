@@ -31,6 +31,7 @@ public class ej_3 {
         
         sumarColumnas(matriz, resultado);
         imprimirMatriz_1dim(resultado);
+        System.out.println("\nLa suma de los elementos de la matriz resultado es: " + sumatoriaTotalMatriz_1dim(resultado));
     }
     
     public static void cargarMatriz(int matriz[][]){
@@ -77,5 +78,13 @@ public class ej_3 {
             resultado[i] = suma;
             suma = 0;
         }
+    }
+    
+    public static int sumatoriaTotalMatriz_1dim(int matriz[]) {
+        int sumatoria = 0;
+        for (int dato : matriz){
+            sumatoria += dato;
+        }
+        return sumatoria;
     }
 }
