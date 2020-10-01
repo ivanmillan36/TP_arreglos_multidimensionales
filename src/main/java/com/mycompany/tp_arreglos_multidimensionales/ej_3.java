@@ -16,12 +16,17 @@ import java.util.Scanner;
  */
 public class ej_3 {
     public static void main(String[] args) {
-        int X;
+        int X = 0;
         int matriz[][], resultado[];
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Ingrese un entero mayor o igual a 3 y menor o igual a 10: ");
-        X = sc.nextInt();
+        while(X < 3 || X > 10){
+            X = sc.nextInt();
+            if(X < 3 || X > 10){
+                System.out.println("Intente de nuevo...");
+            }
+        }
         
         matriz = new int[X][X];
         resultado = new int[X];
