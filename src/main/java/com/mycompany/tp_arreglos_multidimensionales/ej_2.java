@@ -50,12 +50,14 @@ public class ej_2 {
     }
     
     public static void imprimirMatriz(int matriz[][]) {
+        System.out.println("Matriz resultado: \n");
         
         for (int[] fila : matriz) {
+            System.out.print("| ");
             for (int dato : fila) {
                 System.out.print(dato + " ");
             }
-            System.out.println("");
+            System.out.println("|");
         }
     }
     
