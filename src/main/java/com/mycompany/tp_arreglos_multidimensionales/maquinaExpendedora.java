@@ -111,7 +111,7 @@ public class maquinaExpendedora {
             do{
                 if(numProducto < 0 || numProducto >= this.inventario.length) System.out.println("Numero invalido, introduzca otro numero: ");
                     numProducto = sc.nextInt();
-            }while(numProducto >= 0 && numProducto < this.inventario.length);
+            }while(numProducto < 0 && numProducto >= this.inventario.length);
             
             do{
                 System.out.println("Ingrese la cantidad que desea agregar de " + getNombreProducto(numProducto));
@@ -123,6 +123,8 @@ public class maquinaExpendedora {
             stock = stock + stockAgregar;
             this.inventario[numProducto][2] = Integer.toString(stock);
             
+       }else{
+           System.out.println("\n***Password incorrecta...\n");
        }
    }
    
