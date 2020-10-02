@@ -16,7 +16,7 @@ debes rellenar la matriz.Mostrar por pantalla el resultado de la ejecuciónde ca
 package com.mycompany.tp_arreglos_multidimensionales;
 
 import java.util.Scanner;
-import com.mycompany.tp_arreglos_multidimensionales.matriz;
+
 
 /**
  *

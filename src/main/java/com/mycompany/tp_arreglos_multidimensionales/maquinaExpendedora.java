@@ -14,18 +14,18 @@ import java.util.Scanner;
 public class maquinaExpendedora {
 
     String inventario[][] = 
-        {{"KitKat", "32", "10"},
-         {"Chicles", "2", "50"},
-         {"Caramelos de Menta", "2", "50"},
-         {"Huevo Kinder", "25", "10"},
-         {"Chetoos", "30", "10"},
-         {"Twix", "26", "10"},
-         {"M&M'S", "35", "10"},
-         {"Papas Lays", "40", "20"},
-         {"Milkybar", "30", "10"},
-         {"Alfajor Tofi", "20", "15"},
-         {"Lata Coca", "50", "20"},
-         {"Chitos", "45", "10"},
+        {{"KitKat               ", "32", "10"},
+         {"Chicles              ", "2", "50"},
+         {"Caramelos de Menta   ", "2", "50"},
+         {"Huevo Kinder         ", "25", "10"},
+         {"Chetoos              ", "30", "10"},
+         {"Twix                 ", "26", "10"},
+         {"M&M'S                ", "35", "10"},
+         {"Papas Lays           ", "40", "20"},
+         {"Milkybar             ", "30", "10"},
+         {"Alfajor Tofi         ", "20", "15"},
+         {"Lata Coca            ", "50", "20"},
+         {"Chitos               ", "45", "10"},
         };
     int ganancia = 0;
     String passwordAdmin = "AdminXYZ";
@@ -55,7 +55,7 @@ public class maquinaExpendedora {
    
    public void imprimirInventario(){
        for(int i=0 ; i<this.inventario.length ; i++){
-            System.out.println("Producto " + i + "\t" + this.inventario[i][0] + "\t\t\tprecio: " + this.inventario[i][1] + "$ \t// stock: " + this.inventario[i][2] + " unidades");
+            System.out.println("Producto " + i + "\t" + this.inventario[i][0] + "\tprecio: " + this.inventario[i][1] + "$ \t// stock: " + this.inventario[i][2] + " unidades");
        }
    }
     
@@ -82,7 +82,7 @@ public class maquinaExpendedora {
        if(numProducto < 0 || numProducto >= this.inventario.length){
            return "error";
        }else{
-           return this.inventario[numProducto][0];
+           return this.inventario[numProducto][0].replace(" ", "");
        }
    }
    
@@ -122,6 +122,7 @@ public class maquinaExpendedora {
             stock = getStockProducto(numProducto);
             stock = stock + stockAgregar;
             this.inventario[numProducto][2] = Integer.toString(stock);
+            System.out.println("\nStock de " + getNombreProducto(numProducto) + " actualizado corectamente...\n");
             
        }else{
            System.out.println("\n***Password incorrecta...\n");
